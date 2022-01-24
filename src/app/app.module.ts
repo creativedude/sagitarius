@@ -10,6 +10,9 @@ import { ChipComponent } from './components/atoms/chip/chip.component';
 @NgModule({
   declarations: [
     AppComponent,
+    ListComponent,
+    CardComponent,
+    ChipComponent
   ],
   imports: [
     BrowserModule,
