@@ -1,4 +1,4 @@
 <div class="spacer-grid">
-    <app-card></app-card>
+    <app-card *ngFor="let repo of repos;" [repo]="repo"></app-card>
 </div>
 

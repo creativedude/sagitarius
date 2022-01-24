@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Repo } from 'src/app/app.component';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
+  @Input() repos : Repo[] = [];
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

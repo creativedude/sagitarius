@@ -1,12 +1,13 @@
-<a class="card" href="www.creativedude.co.za" target="_blank">
-    <img class="avatar"/>
+<a class="card" href="{{ repo.svn_url }}" target="_blank">
+    <img class="avatar" src="{{repo.owner.avatar_url}}"/>
     <div class="content-wrapper">
-        <h2>Repo Name</h2>
-        <p>Repo Blurb</p>
+        <h2>{{ repo.name }}</h2>
+        <p>{{ repo.description}}</p>
         <div class="meta">
-            <app-chip></app-chip>
-            <app-chip></app-chip>
-            <p>Submitted time by user</p>
+            <app-chip [number]="repo.stargazers_count" label='Stars'></app-chip>
+            <app-chip [number]="repo.open_issues_count" label='Issues'></app-chip>
+            <span>Submitted <strong>{{ submittedDate }} days ago</strong> by <strong>{{ repo.owner.login }}</strong></span>
         </div>
     </div>
 </a>
+
