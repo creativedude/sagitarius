@@ -22,4 +22,18 @@ describe('ChipComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render title', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    component.label = "label is this";
+    fixture.detectChanges();
+    expect(compiled.querySelector('.label')?.textContent).toContain('label is this');
+  });
+
+  it('should render number', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    component.number = 5;
+    fixture.detectChanges();
+    expect(compiled.querySelector('.number')?.textContent).toContain('5');
+  });
 });

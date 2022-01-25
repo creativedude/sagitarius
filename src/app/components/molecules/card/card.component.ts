@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
-import { Repo } from 'src/app/app.component';
+import { Repo } from 'src/app/api/getRepoService';
 
 @Component({
   selector: 'app-card',

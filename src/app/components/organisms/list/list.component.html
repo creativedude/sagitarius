@@ -1,4 +1,11 @@
-<div class="spacer-grid">
+<div class="spacer-grid"
+    infinite-scroll    
+    [infiniteScrollDistance]="scrollDistance"    
+    [infiniteScrollUpDistance]="scrollUpDistance"    
+    [infiniteScrollThrottle]="throttle"    
+    (scrolled)="onScrollDown()">
     <app-card *ngFor="let repo of repos;" [repo]="repo"></app-card>
+    <app-modal *ngIf="warning == true" (DismissWarning)="rateLimitRetry()"></app-modal>
+    <app-loader *ngIf="isLoading == true"class="center"></app-loader>
 </div>
 
