@@ -43,8 +43,6 @@ export class ListComponent implements OnInit {
     })
   }
 
-  selector: string = '.main-panel';  
-
   onScrollDown() {  
     this.getRepos();  
     this.direction = "down";  

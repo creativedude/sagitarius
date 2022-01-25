@@ -11,7 +11,7 @@ In terms of auth, we can reduce rate limiting issues by registering an oauth app
 
 Other things I generally like implementing, but haven't due to lack of time:
 - a more robust global styling and templating system with mixins and variables and a bunch of other niceties. considering our user base for this are likely devs, and their natural habitat is the dark, an automatic dark style wouldve been cool.
-- storybook: this I generally use on react projects, and makes for a good source of truth, and a nice playground to develop components on their own.
+- storybook: this I generally use on react projects, and makes for a good source of truth, and a nice playground to develop components on their own. This also allows for a nice place for documentation.
 - more robust testing, this is generally done with jest. I also like using puppeteer for visual regression testing, just to make sure devs dont have to pay that much attention to any visual changes.
 - linting
 - tests implemented as commit hooks

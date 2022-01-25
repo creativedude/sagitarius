@@ -10,6 +10,8 @@ export class ModalComponent implements OnInit {
   isActive = false;
   constructor() { }
   ngOnInit(): void {
+    //setting a timeout to display dismiss button. we make it long, for extra annoyance. 
+    // possible improvement: check how long since last request, and adjust timeout to that
     setTimeout(() => {
       this.isActive = true;
     }, 45000);
